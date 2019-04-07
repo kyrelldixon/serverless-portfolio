@@ -7,5 +7,5 @@ This portfolio site was built with AWS and ReactJS to experiment with some new t
 This is just a running list of all the tech that I have used to develop this portfolio.
 
 * Brew
-* Git
-* GitHub
+* Git/GitHub
+* SSH
