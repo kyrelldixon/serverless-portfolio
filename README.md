@@ -9,3 +9,7 @@ This is just a running list of all the tech that I have used to develop this por
 * Brew
 * Git/GitHub
 * SSH
+* HTML
+* CSS
+* Font Awesome
+* Google Fonts
