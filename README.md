@@ -13,3 +13,16 @@ This is just a running list of all the tech that I have used to develop this por
 * CSS
 * Font Awesome
 * Google Fonts
+
+## AWS Services Used
+
+* CloudFront
+* CloudWatch Logs
+* IAM
+* Route53
+* Certificate Manager
+* S3
+* AWS Lambda
+* SNS
+* CodeDeploy
+* CodePipeline
