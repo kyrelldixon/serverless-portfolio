@@ -24,5 +24,5 @@ This is just a running list of all the tech that I have used to develop this por
 * S3
 * AWS Lambda
 * SNS
-* CodeDeploy
+* CodeBuild
 * CodePipeline
