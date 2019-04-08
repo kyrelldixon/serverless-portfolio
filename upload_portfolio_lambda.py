@@ -11,7 +11,9 @@ def lambda_handler(event, context):
     SNS_TOPIC_ARN = getenv('SNS_TOPIC_ARN')
     
     try:
-        job = event.get('CodePipeline.job')
+        job = None
+        if event:
+            job = event.get('CodePipeline.job')
         
         if job:
             print(job)
@@ -29,7 +31,7 @@ def lambda_handler(event, context):
         with ZipFile(portfolio_zip) as zip_file:
             for nm in zip_file.namelist():
                 obj = zip_file.open(nm)
-                content_type = guess_type(nm)[0]
+                content_type = guess_type(nm)[0] or "text/plain"
                 portfolio_bucket.upload_fileobj(obj, nm, ExtraArgs={'ContentType': content_type})
                 portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
 
@@ -42,6 +44,7 @@ def lambda_handler(event, context):
     except Exception as e:
         deploy_topic.publish(Message=f"Deploy failed. Reason: {e}", Subject="Deploy Failed")
         if job:
+            codepipeline = client('codepipeline')
             codepipeline.put_job_failure_result(jobId=job["id"])
         raise
 
