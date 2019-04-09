@@ -1,7 +1,7 @@
 import React from 'react';
 
-const WorkBubble = ({ project }) => (
-  <div class="section__exampleWrapper">
+const WorkBubble = ({ project, openModal }) => (
+  <div onClick={() => openModal(project)} class="section__exampleWrapper">
     <div class="section__example">
       <img alt={project.img.alt}
           class="section__exampleImage"

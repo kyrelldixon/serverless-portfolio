@@ -1,0 +1,20 @@
+{
+  "name": "Kyrell Dixon",
+  "social": [
+    {
+      "title": "LinkedIn Profile",
+      "link": "https://www.linkedin.com/in/kyrell-dixon",
+      "icon": "linkedin"
+    },
+    {
+      "title": "Github Profile",
+      "link": "https://www.github.com/kyrelldixon",
+      "icon": "github"
+    },
+    {
+      "title": "Resume",
+      "link": "https://s3.amazonaws.com/kyrelldixon-docs/Resume+2018.pdf",
+      "icon": "file-text"
+    }
+  ]
+}
